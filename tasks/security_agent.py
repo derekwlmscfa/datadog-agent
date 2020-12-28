@@ -201,7 +201,7 @@ def stress_tests(
     if bundle_ebpf:
         build_tags = "ebpf_bindata," + build_tags
 
-    cmd = 'go test -tags functionaltests,stresstests,{build_tags} {race_opt} {output_opt} '
+    cmd = 'go test -tags stresstests,{build_tags} {race_opt} {output_opt} '
     cmd += '{verbose_opt} {failfast_opt} {run_opt} {bench_opt} {repo_path}/pkg/security/tests '
     cmd += '{keep_profile} {report_file} {diff_base}'
 
